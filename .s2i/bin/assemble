@@ -3,7 +3,7 @@
 set -e
 
 echo "Assembling GOPATH..."
-PACKAGE_NAME="github.com/golang-starters/golang-health-check"
+PACKAGE_NAME="github.com/golang-starters/golang-http-crud"
 export GOPATH=`realpath $HOME/go`
 echo "Assembling GOPATH... DONE"
 
