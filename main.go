@@ -40,11 +40,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	_, err = db.CreateFruit(Fruit{ID:2,Name:"Orange", Stock:10 })
+	_, err = db.CreateFruit(Fruit{Name:"Orange", Stock:10 })
 	if err != nil {
 		log.Fatal(err)
 	}
-	_, err = db.CreateFruit(Fruit{ID: 3, Name: "Pear", Stock: 10})
+	_, err = db.CreateFruit(Fruit{Name: "Pear", Stock: 10})
 	if err != nil {
 		log.Fatal(err)
 	}
