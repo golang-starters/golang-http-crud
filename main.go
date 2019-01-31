@@ -36,7 +36,7 @@ func main() {
 	db.Delete(&Fruit{})
 
 	// Sample data
-	_, err  = db.CreateFruit(Fruit{ID: 1, Name: "Apple", Stock: 10})
+	_, err  = db.CreateFruit(Fruit{Name: "Apple", Stock: 10})
 	if err != nil {
 		log.Fatal(err)
 	}
