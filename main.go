@@ -31,7 +31,23 @@ func main() {
 	defer db.Close()
 
 	db.AutoMigrate(&Fruit{})
+	
+	// Delete all data in Fruit table
+	db.Delete(&Fruit{})
 
+	// Sample data
+	_, err  = db.CreateFruit(Fruit{ID: 1, Name: "Apple", Stock: 10})
+	if err != nil {
+		log.Fatal(err)
+	}
+	_, err = db.CreateFruit(Fruit{ID:2,Name:"Orange", Stock:10 })
+	if err != nil {
+		log.Fatal(err)
+	}
+	_, err = db.CreateFruit(Fruit{ID: 3, Name: "Pear", Stock: 10})
+	if err != nil {
+		log.Fatal(err)
+	}
 	fruitController := NewFruitController(db)
 
 	r := mux.NewRouter()
